@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaindropFunctions", "RaindropsApp\RaindropFunctions.csproj", "{EC5F6119-D949-4BE4-992F-F7833F7129A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaindropFunctions", "RaindropsApp\RaindropFunctions.csproj", "{EC5F6119-D949-4BE4-992F-F7833F7129A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaindropsUnitTests", "RaindropsUnitTests\RaindropsUnitTests.csproj", "{B09A94F8-6977-4C9B-A863-D4498B267219}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaindropsUnitTests", "RaindropsUnitTests\RaindropsUnitTests.csproj", "{B09A94F8-6977-4C9B-A863-D4498B267219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaindropsWPF", "RaindropsWPF\RaindropsWPF.csproj", "{F99746A8-0E8D-4425-991C-378FFC4203CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B09A94F8-6977-4C9B-A863-D4498B267219}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B09A94F8-6977-4C9B-A863-D4498B267219}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B09A94F8-6977-4C9B-A863-D4498B267219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99746A8-0E8D-4425-991C-378FFC4203CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99746A8-0E8D-4425-991C-378FFC4203CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99746A8-0E8D-4425-991C-378FFC4203CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99746A8-0E8D-4425-991C-378FFC4203CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
