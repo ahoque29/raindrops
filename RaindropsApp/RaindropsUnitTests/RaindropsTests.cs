@@ -13,9 +13,20 @@ namespace RaindropsUnitTests
 	public class RaindropsTests
 	{
 		[Test]
-		public void WhenZeroIsPassed_ReturnsPlingPlangPlong()
+		public void WhenZeroIsPassed_Returns_PlingPlangPlong()
 		{
 			Assert.That(Raindrops.PlingPlangPlong(0), Is.EqualTo("PlingPlangPlong"));
 		}
+
+		[TestCase(3, "Pling")]
+		[TestCase(-3, "Pling")]
+		[TestCase(198, "Pling")]
+		[TestCase(-24543, "Pling")]
+		public void WhenAnIntegerDivisibleByThreeButNotFiveOrSevenIsPassed_Returns_Pling(int a, string expectedResult)
+		{
+			Assert.That(Raindrops.PlingPlangPlong(a), Is.EqualTo(expectedResult));
+		}
+
+		public void 
 	}
 }
