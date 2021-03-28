@@ -24,16 +24,16 @@ namespace RaindropsWPF
 		public MainWindow()
 		{
 			InitializeComponent();
-			var uri = new Uri("backgrounds/nice.jpg", UriKind.Relative);
-			BackgroundImage.ImageSource = new BitmapImage(uri);
-
+			BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(""));
+			//BackgroundImage.Stretch = Stretch.UniformToFill;
 		}
 
 		private void RainButton_Click(object sender, RoutedEventArgs e)
 		{
-			PPPTextBox.Text = Raindrops.PlingPlangPlong(Int32.Parse(TextBoxInput.Text));
+			PPPTextBox.Text = Raindrops.PPP(Int32.Parse(TextBoxInput.Text));
 
-
+			BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(PPPTextBox.Text));
+			//BackgroundImage.Stretch = Stretch.UniformToFill;
 		}
 	}
 }
