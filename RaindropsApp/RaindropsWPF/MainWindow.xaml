@@ -8,7 +8,6 @@
 	<Border>
 		<Border.Background>
 			<ImageBrush x:Name="BackgroundImage"
-						ImageSource="C:\Users\gaffi\source\repos\raindrops\RaindropsApp\RaindropsWPF\Backgrounds\Nice.jpeg"
 						Stretch="UniformToFill"/>
 		</Border.Background>
 
