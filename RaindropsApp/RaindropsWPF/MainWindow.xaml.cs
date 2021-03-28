@@ -25,7 +25,6 @@ namespace RaindropsWPF
 		{
 			InitializeComponent();
 			BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(""));
-			//BackgroundImage.Stretch = Stretch.UniformToFill;
 		}
 
 		private void RainButton_Click(object sender, RoutedEventArgs e)
@@ -33,7 +32,6 @@ namespace RaindropsWPF
 			PPPTextBox.Text = Raindrops.PPP(Int32.Parse(TextBoxInput.Text));
 
 			BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(PPPTextBox.Text));
-			//BackgroundImage.Stretch = Stretch.UniformToFill;
 		}
 	}
 }
