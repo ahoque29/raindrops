@@ -92,7 +92,60 @@ namespace RaindropsUnitTests
 
 		#region Reasoning Tests
 
+		[Test]
+		public void WhenZeroIsPassed_ReturnsCorrectReasoning()
+		{
+			var result = Explanation.Reasoning(0);
+			var expectedResult = "0 is divisible by everything! Hence PlingPlangPlong!";
 
+			Assert.That(result, Is.EqualTo(expectedResult));
+
+		}
+
+		[Test]
+		public void WhenSixIsPassed_ReturnsCorrectReasoning()
+		{
+			var result = Explanation.Reasoning(6);
+			var expectedResult = "6's prime factors are: 2 3 hence, Pling!";
+
+			Assert.That(result, Is.EqualTo(expectedResult));
+		}
+
+		[TestCase(1, "1's prime factors are: hence, 1!")]
+		[TestCase(2, "2's prime factors are: 2 hence, 2!")]
+		[TestCase(3, "3's prime factors are: 3 hence, Pling!")]
+		[TestCase(5, "5's prime factors are: 5 hence, Plang!")]
+		[TestCase(6, "6's prime factors are: 2 3 hence, Pling!")]
+		[TestCase(7, "7's prime factors are: 7 hence, Plong!")]
+		[TestCase(10, "10's prime factors are: 2 5 hence, Plang!")]
+		[TestCase(14, "14's prime factors are: 2 7 hence, Plong!")]
+		[TestCase(15, "15's prime factors are: 3 5 hence, PlingPlang!")]
+		[TestCase(21, "21's prime factors are: 3 7 hence, PlingPlong!")]
+		[TestCase(35, "35's prime factors are: 5 7 hence, PlangPlong!")]
+		[TestCase(105, "105's prime factors are: 3 5 7 hence, PlingPlangPlong!")]
+		public void WhenANonZeroPositiveIntegerIsPassed_ReturnsCorrectReasoning(int input, string reasoning)
+		{
+			var result = Explanation.Reasoning(input);
+			Assert.That(result, Is.EqualTo(reasoning));
+		}
+
+		[TestCase(-1, "-1's prime factors are: hence, -1!")]
+		[TestCase(-2, "-2's prime factors are: 2 hence, -2!")]
+		[TestCase(-3, "-3's prime factors are: 3 hence, Pling!")]
+		[TestCase(-5, "-5's prime factors are: 5 hence, Plang!")]
+		[TestCase(-6, "-6's prime factors are: 2 3 hence, Pling!")]
+		[TestCase(-7, "-7's prime factors are: 7 hence, Plong!")]
+		[TestCase(-10, "-10's prime factors are: 2 5 hence, Plang!")]
+		[TestCase(-14, "-14's prime factors are: 2 7 hence, Plong!")]
+		[TestCase(-15, "-15's prime factors are: 3 5 hence, PlingPlang!")]
+		[TestCase(-21, "-21's prime factors are: 3 7 hence, PlingPlong!")]
+		[TestCase(-35, "-35's prime factors are: 5 7 hence, PlangPlong!")]
+		[TestCase(-105, "-105's prime factors are: 3 5 7 hence, PlingPlangPlong!")]
+		public void WhenANonZeroNegativeIntegerIsPassed_ReturnsCorrectReasoning(int input, string reasoning)
+		{
+			var result = Explanation.Reasoning(input);
+			Assert.That(result, Is.EqualTo(reasoning));
+		}
 
 		#endregion
 	}

@@ -34,6 +34,11 @@ namespace RaindropFunctions
 
 		public static string Reasoning(int n)
 		{
+			if (n == 0)
+			{
+				return $"0 is divisible by everything! Hence {Raindrops.PPP(n)}!";
+			}
+			
 			var primeFactorString = string.Empty;
 
 			foreach (var prime in PrimeFactorisation(n))
