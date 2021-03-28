@@ -24,14 +24,15 @@ namespace RaindropsWPF
 		public MainWindow()
 		{
 			InitializeComponent();
+			var uri = new Uri("backgrounds/nice.jpg", UriKind.Relative);
+			BackgroundImage.ImageSource = new BitmapImage(uri);
+
 		}
 
 		private void RainButton_Click(object sender, RoutedEventArgs e)
 		{
 			PPPTextBox.Text = Raindrops.PlingPlangPlong(Int32.Parse(TextBoxInput.Text));
 
-			var uri = new Uri("backgrounds/nice.jpg", UriKind.Relative);
-			BackgroundImage.ImageSource = new BitmapImage(uri);
 
 		}
 	}
