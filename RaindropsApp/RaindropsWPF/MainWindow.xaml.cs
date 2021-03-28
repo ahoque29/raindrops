@@ -24,14 +24,11 @@ namespace RaindropsWPF
 		public MainWindow()
 		{
 			InitializeComponent();
-			BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(""));
 		}
 
 		private void RainButton_Click(object sender, RoutedEventArgs e)
 		{
 			PPPTextBox.Text = Raindrops.PPP(Int32.Parse(TextBoxInput.Text));
-
-			BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(PPPTextBox.Text));
 		}
 	}
 }

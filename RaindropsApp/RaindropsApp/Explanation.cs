@@ -31,5 +31,20 @@ namespace RaindropFunctions
 
 			return primeFactors;
 		}
+
+		public static string Reasoning(int n)
+		{
+			var primeFactorString = string.Empty;
+
+			foreach (var prime in PrimeFactorisation(n))
+			{
+				primeFactorString += $"{prime} ";
+			}
+
+			var reasoning = $"{n}'s prime factors are: {primeFactorString}hence, {Raindrops.PPP(n)}!";
+
+			return reasoning;
+		}
+		
 	}
 }

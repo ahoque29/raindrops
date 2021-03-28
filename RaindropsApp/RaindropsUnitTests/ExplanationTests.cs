@@ -11,7 +11,9 @@ namespace RaindropsUnitTests
 	[TestFixture]
 	[Parallelizable]
 	public class ExplanationTests
-	{		
+	{
+		#region Prime Factorisation Tests
+
 		[Test]
 		public void WhenZeroIsFactorised_ReturnsEmptyHashset()
 		{
@@ -85,5 +87,13 @@ namespace RaindropsUnitTests
 
 			Assert.That(result, Is.EqualTo(expectedResult));
 		}
+
+		#endregion
+
+		#region Reasoning Tests
+
+
+
+		#endregion
 	}
 }
