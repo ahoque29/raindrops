@@ -7,7 +7,7 @@ using RaindropFunctions;
 
 namespace RaindropsWPF
 {
-	public static class BackgroundChanger
+	public static class BackgroundSetter
 	{
 		public static string Background(string ppp)
 		{

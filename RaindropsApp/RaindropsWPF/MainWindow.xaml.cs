@@ -29,7 +29,10 @@ namespace RaindropsWPF
 		private void RainButton_Click(object sender, RoutedEventArgs e)
 		{
 			PPPTextBox.Text = Raindrops.PlingPlangPlong(Int32.Parse(TextBoxInput.Text));
-			BackgroundImage.ImageSource = new BitmapImage(new Uri("Backgrounds/Nice.jpeg", UriKind.Relative));
+
+			var uri = new Uri("backgrounds/nice.jpg", UriKind.Relative);
+			BackgroundImage.ImageSource = new BitmapImage(uri);
+
 		}
 	}
 }

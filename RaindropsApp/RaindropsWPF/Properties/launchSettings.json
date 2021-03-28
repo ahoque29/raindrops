@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RaindropsWPF": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\gaffi\\source\\repos\\raindrops\\RaindropsApp\\RaindropsWPF"
+    }
+  }
+}
