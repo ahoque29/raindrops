@@ -10,8 +10,4 @@
     <ProjectReference Include="..\RaindropsApp\RaindropFunctions.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="backgrounds\nice.jpg" />
-  </ItemGroup>
-
 </Project>

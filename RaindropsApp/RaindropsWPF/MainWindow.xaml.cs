@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RaindropFunctions;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using RaindropFunctions;
 
 namespace RaindropsWPF
 {
@@ -29,6 +17,7 @@ namespace RaindropsWPF
 		private void RainButton_Click(object sender, RoutedEventArgs e)
 		{
 			PPPTextBox.Text = Raindrops.PPP(Int32.Parse(TextBoxInput.Text));
+			ExplanationTextBox.Text = Explanation.Reasoning(Int32.Parse(TextBoxInput.Text));
 		}
 	}
 }

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RaindropFunctions;
+using System;
+using System.Collections.Generic;
 
 namespace RaindropsUnitTests
 {
@@ -21,7 +18,6 @@ namespace RaindropsUnitTests
 			var expectedResult = new HashSet<int>();
 
 			Assert.That(result, Is.EqualTo(expectedResult));
-
 		}
 
 		[Test]
@@ -31,7 +27,6 @@ namespace RaindropsUnitTests
 			var expectedResult = new HashSet<int>();
 
 			Assert.That(result, Is.EqualTo(expectedResult));
-
 		}
 
 		[Test]
@@ -43,7 +38,7 @@ namespace RaindropsUnitTests
 				2, 3
 			};
 
-			Assert.That(result, Is.EqualTo(expectedResult));			
+			Assert.That(result, Is.EqualTo(expectedResult));
 		}
 
 		[Test]
@@ -55,7 +50,7 @@ namespace RaindropsUnitTests
 				2, 3, 5, 7, 11, 13, 17
 			};
 
-			Assert.That(result, Is.EqualTo(expectedResult));			
+			Assert.That(result, Is.EqualTo(expectedResult));
 		}
 
 		[Test]
@@ -67,7 +62,7 @@ namespace RaindropsUnitTests
 				2, 3, 5, 7, 11, 13, 17, 19
 			};
 
-			Assert.That(result, Is.EqualTo(expectedResult));			
+			Assert.That(result, Is.EqualTo(expectedResult));
 		}
 
 		[TestCase(2)]
@@ -88,7 +83,7 @@ namespace RaindropsUnitTests
 			Assert.That(result, Is.EqualTo(expectedResult));
 		}
 
-		#endregion
+		#endregion Prime Factorisation Tests
 
 		#region Reasoning Tests
 
@@ -99,7 +94,6 @@ namespace RaindropsUnitTests
 			var expectedResult = "0 is divisible by everything! Hence PlingPlangPlong!";
 
 			Assert.That(result, Is.EqualTo(expectedResult));
-
 		}
 
 		[Test]
@@ -147,6 +141,6 @@ namespace RaindropsUnitTests
 			Assert.That(result, Is.EqualTo(reasoning));
 		}
 
-		#endregion
+		#endregion Reasoning Tests
 	}
 }

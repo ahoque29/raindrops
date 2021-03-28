@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RaindropFunctions
 {
@@ -38,7 +35,7 @@ namespace RaindropFunctions
 			{
 				return $"0 is divisible by everything! Hence {Raindrops.PPP(n)}!";
 			}
-			
+
 			var primeFactorString = string.Empty;
 
 			foreach (var prime in PrimeFactorisation(n))
@@ -50,6 +47,5 @@ namespace RaindropFunctions
 
 			return reasoning;
 		}
-		
 	}
 }
