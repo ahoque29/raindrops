@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RaindropFunctions;
 
 namespace RaindropsWPF
 {
@@ -23,6 +24,11 @@ namespace RaindropsWPF
 		public MainWindow()
 		{
 			InitializeComponent();
+		}
+
+		private void RainButton_Click(object sender, RoutedEventArgs e)
+		{						
+			PPPTextBox.Text = Raindrops.PlingPlangPlong(Int32.Parse(TextBoxInput.Text));
 		}
 	}
 }

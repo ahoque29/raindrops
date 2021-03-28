@@ -1,12 +1,69 @@
 ﻿<Window x:Class="RaindropsWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RaindropsWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Raindrops" Height="300" Width="400">
+	<Border>
+		<Border.Background>
+			<ImageBrush x:Name="BackgroundImage"
+						ImageSource="C:\Users\gaffi\source\repos\raindrops\RaindropsApp\RaindropsWPF\Backgrounds\Nice.jpeg"
+						Stretch="UniformToFill"/>
+		</Border.Background>
 
-    </Grid>
+		<StackPanel Margin="20">
+			<TextBlock Margin="5"
+					   FontSize="15"
+					   FontWeight="Bold"
+					   Text="Enter an integer:" />
+
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+
+				<TextBox x:Name="TextBoxInput"
+						 Grid.Column="0"
+						 Margin="5"
+						 Height="25"
+						 Width="100"
+						 Background="#C3D8E1"
+						 TextAlignment="Center"
+						 FontSize="15"/>
+
+				<Button x:Name="RainButton"
+						Margin="10"
+						Grid.Column="1"
+						Content="Rain?!"
+						FontWeight="Bold"
+						FontSize="25"
+						Height="50"
+						Background="#7AA8C5"
+						Click="RainButton_Click"/>
+			</Grid>
+
+			<TextBox x:Name="PPPTextBox"
+					 Margin="25"
+					 Height="45"
+					 TextAlignment="Center"
+					 FontSize="20"
+					 FontWeight="Bold"
+					 FontFamily="Verdana"
+					 Padding="5"
+					 />
+			
+			<Expander Header="Explanation" IsExpanded="False">
+				
+			</Expander>
+
+
+		</StackPanel>
+		
+		
+		
+		
+	</Border>
+	
 </Window>

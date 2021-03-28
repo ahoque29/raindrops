@@ -6,4 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Backgrounds\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RaindropsApp\RaindropFunctions.csproj" />
+  </ItemGroup>
+
 </Project>
