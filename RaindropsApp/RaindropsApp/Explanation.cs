@@ -12,9 +12,14 @@ namespace RaindropFunctions
 		{
 			var primeFactors = new HashSet<int>();
 
-			var a = n;
+			if (n == 0)
+			{
+				return primeFactors;
+			}
 
-			for (int i = 0; a != 1; i++)
+			var a = Math.Abs(n);
+
+			for (int i = 2; a != 1; i++)
 			{
 				if (a % i == 0)
 				{
