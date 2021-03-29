@@ -16,8 +16,15 @@ namespace RaindropsWPF
 
 		private void RainButton_Click(object sender, RoutedEventArgs e)
 		{
-			PPPTextBox.Text = Raindrops.PPP(Int32.Parse(TextBoxInput.Text));
-			ExplanationTextBox.Text = Explanation.Reasoning(Int32.Parse(TextBoxInput.Text));
+			try
+			{
+				PPPTextBox.Text = Raindrops.PPP(Int32.Parse(TextBoxInput.Text));
+				ExplanationTextBox.Text = Explanation.Reasoning(Int32.Parse(TextBoxInput.Text));
+			}
+			catch (Exception)
+			{
+				PPPTextBox.Text = "Please enter an integer!";
+			}
 		}
 	}
 }
