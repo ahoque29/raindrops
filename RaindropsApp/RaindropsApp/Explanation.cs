@@ -28,7 +28,7 @@ namespace RaindropFunctions
 
 			var intermediate = Math.Abs(input);
 
-			// computes and adds prime factors by repeated division
+			// computes then adds prime factors into the HashSet using repeated division
 			for (int i = 2; intermediate != 1; i++)
 			{
 				if (intermediate % i == 0)
