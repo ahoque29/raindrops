@@ -40,7 +40,7 @@ namespace RaindropFunctions
 
 			foreach (var prime in PrimeFactorisation(n))
 			{
-				primeFactorString += $"{prime} ";
+				primeFactorString += $"{prime}, ";
 			}
 
 			var reasoning = $"{n}'s prime factors are: {primeFactorString}hence, {Raindrops.PPP(n)}!";
