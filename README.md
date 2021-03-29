@@ -1,5 +1,11 @@
 # Raindrops
+
 A simple program that outputs strings based on the numerical input. Has a lite WPF front end with a small explanation tab. The background of the App changes depending on the input.
+
+# User Guide
+
++ Clone the repository and open it in Visual Studio. 
++ Set RaindropsWPF as the Startup Project and run it.
 
 # Specifications
 
@@ -13,6 +19,7 @@ Write a function that takes as its input a number (n) and converts it to a strin
 + If the number does not have any of the above as a factor, simply return the number's digits.
 
 ### Examples
+
 + 28's factors are 1, 2, 4, 7, 14 and 28: this would be a simple 'Plong'
 + 30's factors are 1, 2, 3, 5, 6, 10, 15, 30: this would be a 'PlingPlang'
 + 34's factors are 1, 2, 17, and 34: this would be '34'
