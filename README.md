@@ -1,5 +1,5 @@
 # Raindrops
-A simple program that outputs strings based on the numerical input.
+A simple program that outputs strings based on the numerical input. Has a lite WPF front end with a small explanation tab.
 
 # Specifications
 
@@ -24,8 +24,30 @@ Write a function that takes as its input a number (n) and converts it to a strin
 The project has been done with C#. It contains the following function classes:
 
 + Raindrops: class that contains the method that returns PlingPlangPlong depending on the input.
-+ Explanation: class that contains methods to return prime factors of a given numerical input as well as an explanation as to how the method in raindrop worked, depending on the input.
++ Explanation: class that contains methods to return prime factors of a given numerical input as well as an explanation as to how the method in raindrop worked, depending on the input. This is to be displayed in the wpf
 
 ## Test classes
 
 Unit tests for the methods in the function classes.
+
+### Raindrop Tests
+
+Unit tests have been created to cover all unit cases, including positive and negative cases for each:
+
++ Input of 0
++ Input not divisible by 3, 5 or 7
++ Input divisible by 3 but not 5 or 7
++ Input divisible by 5 but not 3 or 7
++ Input divisible by 7 but not 3 or 5
++ Input divisible by 3 and 5 but not 7
++ Input divisible by 5 and 7 but not 3
++ Input divisible by 3 and 7 but not 5
++ Input divisible by 3, 5 and 7
+
+### Explanation Tests
+
+Unit tests have also been implemented for the Explanation class which tests both the Prime Factorisation and Reasoning method to the same extent as the Raindrop method.
+
+## WPF
+
+Added a lite WPF front end. It has a text box that takes in the input integer and displays PlingPlangPlong depending on the input. It also handles argument exceptions by outputting "Please enter an integer!" if an improper input has been entered.
