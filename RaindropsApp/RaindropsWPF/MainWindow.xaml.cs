@@ -1,6 +1,7 @@
 ﻿using RaindropFunctions;
 using System;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace RaindropsWPF
 {
@@ -12,6 +13,7 @@ namespace RaindropsWPF
 		public MainWindow()
 		{
 			InitializeComponent();
+			BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(""));
 		}
 
 		private void RainButton_Click(object sender, RoutedEventArgs e)
@@ -19,6 +21,7 @@ namespace RaindropsWPF
 			try
 			{
 				PPPTextBox.Text = Raindrops.PPP(Int32.Parse(TextBoxInput.Text));
+				BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(PPPTextBox.Text));
 				ExplanationTextBox.Text = Explanation.Reasoning(Int32.Parse(TextBoxInput.Text));
 			}
 			catch (Exception)

@@ -5,7 +5,11 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		mc:Ignorable="d"
         Title="Raindrops" Height="350" Width="400">
-	<Border Background="#93A7AA">
+	<Border>
+		<Border.Background>
+			<ImageBrush x:Name="BackgroundImage"
+						Stretch="UniformToFill" />
+		</Border.Background>
 		<StackPanel Margin="20">
 			<TextBlock Margin="5"
 					   FontSize="15"
