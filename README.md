@@ -52,4 +52,4 @@ Unit tests have also been implemented for the Explanation class which tests both
 
 Added a lite WPF front end. It has a text box that takes in the input integer and displays PlingPlangPlong depending on the input. It also handles argument exceptions by outputting "Please enter an integer!" if an improper input has been entered.
 
-The background of the WPF also changed depending on the output!
+The background of the WPF also changes depending on the output!
