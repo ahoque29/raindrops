@@ -3,25 +3,38 @@ using System.Collections.Generic;
 
 namespace RaindropFunctions
 {
+	/// <summary>
+	/// Static class that holds methods for the explanation part of the front end
+	/// </summary>
 	public static class Explanation
 	{
-		public static HashSet<int> PrimeFactorisation(int n)
+		/// <summary>
+		/// Static Method that takes in an integer and returns a HashSet of it's prime factors
+		/// </summary>
+		/// <param name="input">
+		/// Integer input
+		/// </param>
+		/// <returns>
+		/// HashSet of prime factors
+		/// </returns>
+		public static HashSet<int> PrimeFactorisation(int input)
 		{
 			var primeFactors = new HashSet<int>();
 
-			if (n == 0)
+			if (input == 0)
 			{
 				return primeFactors;
 			}
 
-			var a = Math.Abs(n);
+			var intermediate = Math.Abs(input);
 
-			for (int i = 2; a != 1; i++)
+			// computes and adds prime factors by repeated division
+			for (int i = 2; intermediate != 1; i++)
 			{
-				if (a % i == 0)
+				if (intermediate % i == 0)
 				{
 					primeFactors.Add(i);
-					a /= i;
+					intermediate /= i;
 					i--;
 				}
 			}
@@ -29,11 +42,18 @@ namespace RaindropFunctions
 			return primeFactors;
 		}
 
+		/// <summary>
+		/// Static method that returns the explanation text for the front end
+		/// </summary>
+		/// <param name="n">
+		/// Integer input
+		/// </param>
+		/// <returns></returns>
 		public static string Reasoning(int n)
 		{
 			if (n == 0)
 			{
-				return $"0 is divisible by everything! Hence {Raindrops.PPP(n)}!";
+				return $"0 is divisible by everything! Hence {Raindrops.PlingPlangPlong(n)}!";
 			}
 
 			var primeFactorString = string.Empty;
@@ -43,7 +63,7 @@ namespace RaindropFunctions
 				primeFactorString += $"{prime}, ";
 			}
 
-			var reasoning = $"{n}'s prime factors are: {primeFactorString}hence, {Raindrops.PPP(n)}!";
+			var reasoning = $"{n}'s prime factors are: {primeFactorString}hence, {Raindrops.PlingPlangPlong(n)}!";
 
 			return reasoning;
 		}

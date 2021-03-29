@@ -13,6 +13,7 @@ namespace RaindropsWPF
 		public MainWindow()
 		{
 			InitializeComponent();
+			// sets the initial background
 			BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(""));
 		}
 
@@ -20,8 +21,13 @@ namespace RaindropsWPF
 		{
 			try
 			{
-				PPPTextBox.Text = Raindrops.PPP(Int32.Parse(TextBoxInput.Text));
+				/// prints the output (plingplangplong) into the text box
+				PPPTextBox.Text = Raindrops.PlingPlangPlong(Int32.Parse(TextBoxInput.Text));
+
+				// changes the background depending on the output
 				BackgroundImage.ImageSource = new BitmapImage(BackgroundSetter.Background(PPPTextBox.Text));
+
+				// generates the explanation.
 				ExplanationTextBox.Text = Explanation.Reasoning(Int32.Parse(TextBoxInput.Text));
 			}
 			catch (Exception)
